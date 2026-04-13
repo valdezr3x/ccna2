@@ -172,10 +172,10 @@ config t
 ip routing
 ip dhcp pool CAMERA6
 host 10.71.50.6 255.255.255.0
-client-identifier 001a.0704.7f5b
+client-identifier 001a.0704.7f67
 ip dhcp pool CAMERA8
 host 10.71.50.8 255.255.255.0
-client-identifier 001a.0709.c258 
+client-identifier 001a.0709.c652
 end
 show ip dhcp binding
 
@@ -250,12 +250,12 @@ ephone-dn 8
 ephone-dn 10
  number 7198
 Ephone 1
-  Mac-address cafe.face.baba
+  Mac-address ccd8.c1fb.1519
   type 8945
   button 1:8 2:7 3:6 4:5
   restart
 Ephone 2
-  Mac-address fafa.caca.baba
+  Mac-address 64e9.50ca.9f7e
   type 8945
   button 1:4 2:3 3:2 4:1
   restart  
@@ -288,10 +288,10 @@ configure terminal
  destination-pattern 11..
  session target ipv4:10.11.100.8
  codec g711ULAW
-  !dial-peer voice 12 Voip
-  !destination-pattern 12..
-  !session target ipv4:10.12.100.8
-  !codec g711ULAW
+  dial-peer voice 12 Voip
+  destination-pattern 12..
+  session target ipv4:10.12.100.8
+  codec g711ULAW
 dial-peer voice 21 Voip
  destination-pattern 21..
  session target ipv4:10.21.100.8
@@ -332,10 +332,10 @@ dial-peer voice 62 Voip
  destination-pattern 62..
  session target ipv4:10.62.100.8
  codec g711ULAW
-dial-peer voice 71 Voip
- destination-pattern 71..
- session target ipv4:10.71.100.8
- codec g711ULAW
+!dial-peer voice 71 Voip
+!destination-pattern 71..
+!session target ipv4:10.71.100.8
+!codec g711ULAW
 dial-peer voice 72 Voip
  destination-pattern 72..
  session target ipv4:10.72.100.8
